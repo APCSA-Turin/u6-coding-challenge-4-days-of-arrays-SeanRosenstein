@@ -8,7 +8,7 @@ import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 public class TestDay3 {
-        @Test
+    @Test
     public void testGenerateSnowflakeOddSize() {
         int size = 9; // Odd size for symmetry
         String[][] snowflake = Day3.generateSnowflake(size);
@@ -33,17 +33,17 @@ public class TestDay3 {
 
     @Test
     public void testGenerateSnowflakeDesign() {
-        int size = 7; // Small odd size
+        int size = 7; 
         String[][] snowflake = Day3.generateSnowflake(size);
         String[][] check = {
-            {"*"," "," ","*"," "," ","*"},
-            {" ","*"," ","*"," ","*"," "},
-            {" "," ","*","*","*"," "," "},
-            {"*","*","*","*","*","*","*"},
-            {" "," ","*","*","*"," "," "},
-            {" ","*"," ","*"," ","*"," "},
-            {"*"," "," ","*"," "," ","*"}
-                        };
+                { "*", " ", " ", "*", " ", " ", "*" },
+                { " ", "*", " ", "*", " ", "*", " " },
+                { " ", " ", "*", "*", "*", " ", " " },
+                { "*", "*", "*", "*", "*", "*", "*" },
+                { " ", " ", "*", "*", "*", " ", " " },
+                { " ", "*", " ", "*", " ", "*", " " },
+                { "*", " ", " ", "*", " ", " ", "*" }
+        };
         assertTrue(Arrays.deepEquals(snowflake, check), "Snowflake design is incorrect");
     }
 
